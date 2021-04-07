@@ -4,11 +4,6 @@ set -e
 
 hugo --gc --minify --cleanDestinationDir
 
-if [ -z "$INPUT_ARGS" ]; then
-  echo '::error::Required Args parameter'
-  exit 1
-fi
-
 if [ -z "$INPUT_SECRET_ID" ]; then
   echo '::error::Required SecretId parameter'
   exit 1
