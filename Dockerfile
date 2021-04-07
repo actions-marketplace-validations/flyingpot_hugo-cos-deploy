@@ -1,8 +1,8 @@
 FROM archlinux
 
-RUN pacman -Syu --noconfirm hugo
+RUN pacman -Syu --noconfirm hugo python-pip
 
-RUN pip3 install --upgrade --no-cache-dir coscmd
+RUN pip install --upgrade --no-cache-dir coscmd
 
 COPY entrypoint.sh /entrypoint.sh
 
